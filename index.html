@@ -9,8 +9,30 @@
 </head>
 
 <body>
-    <h1>s</h1>
-    
+    <div class="container">
+        <div class="header">
+            Header
+        </div>
+        <div class="main">
+            Add new book to library
+            <form id="addBook">
+                <label for="title">Title:</label>
+                <input type="text" id="title" name="title">
+                <label for="author">Author:</label>
+                <input type="text" id="author" name="author">
+                <label for="pages">Pages:</label>
+                <input type="text" id="pages" name="pages">
+                <label for="read">Read:</label>
+                <input type="text" id="read" name="read">
+                <button id="submitButton" type="button">Submit</button>
+            </form>
+            <div id="output"></div>
+            <div id="displayLibrary">Library:</div>
+        </div>
+        <div class="footer">
+            Footer
+        </div>
+    </div>
+    <script src="script.js"></script>
 </body>
-<script src="script.js"></script>
 </html>
