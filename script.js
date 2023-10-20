@@ -84,8 +84,18 @@ submitButton.addEventListener("click", function(event) {
 
     const title = document.getElementById("title").value;
     const author = document.getElementById("author").value;
-    const pages = document.getElementById("pages").value;
+    const pages = document.getElementById("pages").value + " pages";
     const read = document.getElementById("read").value;
+
+    if(title.trim() === '' || author.trim() === '' || pages.trim() === '' || read.trim() === ''){
+        alert("Please fill out all fields");
+        return;
+    }
+    if(read.trim() !== 'read' && read.trim() !== 'not read yet'){
+        console.log(read.trim());
+        alert("Enter 'read' or 'not read yet' in the read field");
+        return;
+    }
 
     addBookToLibrary(title, author, pages, read);
     displayBook(myLibrary);
